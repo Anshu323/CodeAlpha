@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="TASK1.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('architecture')">Architecture</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo(1).jpg" alt="Nature 1" onclick="openLightbox(this)"/></div>
+    <div class="image nature"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo-88630.jpeg" alt="Nature 2" onclick="openLightbox(this)"/></div>
+    <div class="image architecture"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo-101667.jpeg" alt="Building 1" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo-207088.jpeg" alt="Animal 1" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo-226424.jpeg" alt="Animal 2" onclick="openLightbox(this)"/></div>
+    <div class="image architecture"><img src="C:\Users\Lenovo\OneDrive\Desktop\CODESOFT\pexels-photo-358457.jpeg" alt="Building 2" onclick="openLightbox(this)"/></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="nav">
+      <button onclick="changeImage(-1)">&#10094;</button>
+      <button onclick="changeImage(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="TASK1.js"></script>
+</body>
+</html>
